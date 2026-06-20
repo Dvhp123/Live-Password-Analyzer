@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Analyzer</title>
+    <meta name="description" content="A live password strength analyzer that checks password complexity, criteria matching, and displays strength classification in real-time.">
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🔐 Password Strength Analyzer</h1>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter Password">
+
+        <div class="meter">
+            <div class="bar" id="bar"></div>
+        </div>
+
+        <div class="result">
+            <h3 id="strength">Start Typing...</h3>
+
+            <p id="length">❌ Minimum 8 Characters</p>
+            <p id="upper">❌ Uppercase Letter</p>
+            <p id="lower">❌ Lowercase Letter</p>
+            <p id="number">❌ Number</p>
+            <p id="special">❌ Special Character</p>
+
+            <p id="score">Score : 0/5</p>
+        </div>
+
+        <button onclick="savePassword()">
+            Submit
+        </button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Password</th>
+                    <th>Strength</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="savedData">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
